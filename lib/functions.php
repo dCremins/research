@@ -1,7 +1,8 @@
 <?php
 // Add all files in lib folder into array
 $include = [
-  '/cpt.php',       // Register Post Type 
+  '/cpt.php',       // Register Post Type
+  '/acf.php',       // Register Advanced Custom Fields 
 ];
 
 // Require Once each file in the array

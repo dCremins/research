@@ -19,10 +19,7 @@ function research_post_type() {
     'query_var'     => true,
     'has_archive'   => true,
     'menu_icon'     => 'dashicons-book-alt',
-    'supports'      => [
-      'title'               => true,
-      'editor'              => true,
-    ],
+    'supports'      => array('title', 'editor', 'author'),
 
   ]);
 }

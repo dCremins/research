@@ -1,0 +1,157 @@
+[
+    {
+        "key": "group_587e46edbd99b",
+        "title": "Documents",
+        "fields": [
+            {
+                "key": "field_587e47345a1f5",
+                "label": "Type",
+                "name": "type",
+                "type": "select",
+                "instructions": "The type of file to attach",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": 30,
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Paper": "Paper",
+                    "Spreadsheet": "Spreadsheet",
+                    "Video": "Video",
+                    "Technical Brief": "Technical Brief",
+                    "Brochure": "Brochure"
+                },
+                "default_value": [
+                    "Paper \/ Report"
+                ],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": "",
+                "disabled": 0,
+                "readonly": 0
+            },
+            {
+                "key": "field_587e485eb4dcb",
+                "label": "Link",
+                "name": "link",
+                "type": "url",
+                "instructions": "Link to the paper location",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_587e47345a1f5",
+                            "operator": "==",
+                            "value": "Paper"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": 30,
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_587e46f75a1f4",
+                "label": "File",
+                "name": "file",
+                "type": "file",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_587e47345a1f5",
+                            "operator": "!=",
+                            "value": "Paper"
+                        },
+                        {
+                            "field": "field_587e47345a1f5",
+                            "operator": "!=",
+                            "value": "Video"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": 30,
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_size": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_587e488fb4dcc",
+                "label": "Video",
+                "name": "video",
+                "type": "oembed",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_587e47345a1f5",
+                            "operator": "==",
+                            "value": "Video"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": 30,
+                    "class": "",
+                    "id": ""
+                },
+                "width": "",
+                "height": ""
+            },
+            {
+                "key": "field_587e47e3ff002",
+                "label": "Text",
+                "name": "text",
+                "type": "text",
+                "instructions": "The link text for this file",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": 30,
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Link",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": "",
+                "readonly": 0,
+                "disabled": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "research"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]
