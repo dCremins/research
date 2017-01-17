@@ -1,6 +1,7 @@
 <?php
 // Add all files in lib folder into array
 $include = [
+  '/cpt.php',       // Register Post Type 
 ];
 
 // Require Once each file in the array
