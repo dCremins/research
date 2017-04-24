@@ -17,10 +17,12 @@
                 },
                 "choices": {
                     "Paper": "Paper",
+                    "Report": "Report",
+                    "Guideline": "Guideline",
                     "Spreadsheet": "Spreadsheet",
                     "Video": "Video",
                     "Technical Brief": "Technical Brief",
-                    "Brochure": "Brochure"
+                    "Brochure": "Brochure" 
                 },
                 "default_value": [
                     "Paper \/ Report"
