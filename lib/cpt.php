@@ -18,13 +18,13 @@ function research_post_type()
         'parent_item_colon'   => __('Parent Research'),
         'not_found'           => __('No Research found.'),
         'not_found_in_trash'  => __('No Research found in Trash.'),
-        'taxonomies'          => array('category'),
       ],
       'public'        => true,
       'query_var'     => true,
       'has_archive'   => true,
       'menu_icon'     => 'dashicons-book-alt',
       'supports'      => array('title', 'editor', 'author'),
+      'taxonomies'          => array('category'),
     ]);
 }
 
