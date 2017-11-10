@@ -2,17 +2,19 @@
 /*
 Plugin Name: ITRE Research Documents
 GitHub Plugin URI: https://github.com/dcremins/research
-GitHub Branch:      master
+GitHub Branch: master
 Description: Custom Post Type and Views for ITRE website use
-Version: 0.1.2
+Version: 1.0.0
 Author: Devin Cremins
 Author URI: http://octopusoddments.com
 */
 
 // Add all files in lib folder into array
 $include = [
-  '/lib/cpt.php',       // Register Post Type
-  '/lib/add-acf.php',       // Register Advanced Custom Fields
+	'/lib/bylines_filters.php',  // Display Bylines
+  '/lib/cpt.php',       			// Register Post Type
+  '/lib/add-acf.php',   			// Register Advanced Custom Fields
+  '/lib/templates.php',   		// Register Views
 ];
 
 // Require Once each file in the array
@@ -27,10 +29,10 @@ unset($file, $filepath);
 
 /* Add Style.css */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('myCSS', plugins_url('/styles/main.css', __FILE__));
+    wp_enqueue_style('research_css', plugins_url('/styles/main.css', __FILE__));
 });
 
 /* Add Admin.css */
 add_action('admin_enqueue_scripts', function () {
-    wp_enqueue_style('adminCSS', plugins_url('/styles/admin.css', __FILE__));
+    wp_enqueue_style('research_admin_css', plugins_url('/styles/admin.css', __FILE__));
 });
