@@ -31,7 +31,7 @@ function research_post_type()
 add_action('init', __NAMESPACE__ . '\\research_post_type');
 
 function loop_filter($query) {
-  if ( !is_admin() && $query->is_main_query() ) {
+	if ( !is_admin() && $query->is_main_query()&& (is_search() || is_archive())  ) {
 		// Fetch current query post types
 		$post_types = $query->get('post_type');
 			// If there are already post types set and they aren't in an array
@@ -40,8 +40,9 @@ function loop_filter($query) {
 				$post_types = explode(',', $post_types);
 			}
 			// If there are no post types set, create an array containing 'Post' post type
-      if (empty($post_types))
-          $post_types[] = 'post';
+      if (empty($post_types)) {
+				$post_types[] = 'post';
+			}
 			// Add our custom post type
       $post_types[] = 'research';
 			// Clean up the array, just in case
