@@ -19,6 +19,10 @@ function research_post_type()
         'not_found'           => __('No Research found.'),
         'not_found_in_trash'  => __('No Research found in Trash.'),
       ],
+			'rewrite'				=> array(
+				'slug' 				=> 'archive',
+			  'with_front' 	=> false,
+			),
       'public'        => true,
       'query_var'     => true,
       'has_archive'   => true,
@@ -31,7 +35,7 @@ function research_post_type()
 add_action('init', __NAMESPACE__ . '\\research_post_type');
 
 function loop_filter($query) {
-	if ( !is_admin() && $query->is_main_query()&& (is_search() || is_archive())  ) {
+	if ( !is_admin() && $query->is_main_query() && (is_search() || is_archive() || is_home())  ) {
 		// Fetch current query post types
 		$post_types = $query->get('post_type');
 			// If there are already post types set and they aren't in an array
@@ -52,5 +56,3 @@ function loop_filter($query) {
       $query->set('post_type', $post_types);
   }
 }
-
-add_action('pre_get_posts', __NAMESPACE__ . '\\loop_filter');
