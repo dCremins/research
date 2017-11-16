@@ -11,6 +11,12 @@
 		get_search_form();
 	}
 	while (have_posts()) {
+		if ( category_description() ) {
+			// If the category has a description, show it above the posts
+			echo '<div class="category-description">';
+			echo '<p>' . category_description() . '</p>';
+			echo '</div>';
+		}
 		the_post();
 		echo '<article ';
 		post_class();
