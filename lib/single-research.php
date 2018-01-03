@@ -36,8 +36,20 @@
 							$file = get_sub_field('file');
 							$title = get_sub_field('text');
 							$type = get_sub_field('type');
+							$text = get_sub_field('link');
+							$video = get_sub_field('video');
+							$link = '';
+
+							if($type == 'Video') {
+								$link = $video['url'];
+							} elseif($type == 'Paper') {
+								$link = $text;
+							} else {
+								$link = $file['url'];
+							}
+
 							echo '<li class="research-files"><a href="'
-								. $file['url']
+								. $link
 								. '">'
 								. $title
 								. '</a> ['
