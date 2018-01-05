@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.1.2 =
+* Forgot to clean up the code
+
 = 1.1.1 =
 * Changed video field to use link to account for non-included file types
 

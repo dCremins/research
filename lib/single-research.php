@@ -37,7 +37,6 @@
 							$title = get_sub_field('text');
 							$type = get_sub_field('type');
 							$text = get_sub_field('link');
-							$video = get_sub_field('video');
 							$link = '';
 
 							if($text) {
@@ -46,7 +45,6 @@
 								$link = $file['url'];
 							}
 
-							echo var_dump($link);
 							echo '<li class="research-files"><a href="'
 								. $link
 								. '">'
