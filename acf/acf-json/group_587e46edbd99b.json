@@ -69,11 +69,6 @@
                             {
                                 "field": "field_587e47345a1f5",
                                 "operator": "!=",
-                                "value": "Video"
-                            },
-                            {
-                                "field": "field_587e47345a1f5",
-                                "operator": "!=",
                                 "value": "Technical Brief"
                             },
                             {
@@ -93,11 +88,11 @@
                 },
                 {
                     "key": "field_587e46f75a1f4",
-                    "label": "File",
+                    "label": "http:\/\/google.com",
                     "name": "file",
                     "type": "file",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": [
                         [
                             {
@@ -122,30 +117,6 @@
                     "min_size": "",
                     "max_size": "",
                     "mime_types": ""
-                },
-                {
-                    "key": "field_587e488fb4dcc",
-                    "label": "Video",
-                    "name": "video",
-                    "type": "oembed",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_587e47345a1f5",
-                                "operator": "==",
-                                "value": "Video"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": 30,
-                        "class": "",
-                        "id": ""
-                    },
-                    "width": "",
-                    "height": ""
                 },
                 {
                     "key": "field_587e47e3ff002",
@@ -188,5 +159,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1510333992
+    "modified": 1515184875
 }

@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.1.1 =
+* Changed video field to use link to account for non-included file types
+
 = 1.1.0 =
 * Changed Byline filter to remove errors
 	* probably

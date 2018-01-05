@@ -40,14 +40,13 @@
 							$video = get_sub_field('video');
 							$link = '';
 
-							if($type == 'Video') {
-								$link = $video['url'];
-							} elseif($type == 'Paper') {
+							if($text) {
 								$link = $text;
 							} else {
 								$link = $file['url'];
 							}
 
+							echo var_dump($link);
 							echo '<li class="research-files"><a href="'
 								. $link
 								. '">'
