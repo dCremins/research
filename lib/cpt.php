@@ -53,6 +53,6 @@ function loop_filter($query) {
   }
 }
 
-add_action('pre_get_posts', __NAMESPACE__ . '\\loop_filter', 99);
+//add_action('pre_get_posts', __NAMESPACE__ . '\\loop_filter', 99);
 
 ?>
