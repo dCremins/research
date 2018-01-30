@@ -4,6 +4,13 @@
  Template Post Type: research
  */
 
+ if (!have_posts()) {
+  echo '<div class="alert alert-warning">';
+    echo 'Sorry, no results were found.';
+  echo '</div>';
+  get_search_form();
+}
+
 	while (have_posts()) {
 		the_post();
 		echo 'Under Maintenance';
