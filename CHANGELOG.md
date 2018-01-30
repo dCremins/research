@@ -1,10 +1,15 @@
 == Changelog ==
 
+= 1.1.6 =
+* Now only Searches and Authors are broken
+* Remove Template filter
+
 = 1.1.5 =
 * moved to smaller numbers for a second to test
 * Error is in CPT not Template
 * Error is with filter function
 * Remove the section to add post back to empty array
+* Rewrite filter to return on wrong type instead
 
 = 1.1.4 =
 * Remove leading /

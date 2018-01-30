@@ -4,7 +4,7 @@ Plugin Name: ITRE Research Documents
 GitHub Plugin URI: https://github.com/dcremins/research
 GitHub Branch: master
 Description: Custom Post Type and Views for ITRE website use
-Version: 1.1.5.13
+Version: 1.1.6.1
 Author: Devin Cremins
 Author URI: http://octopusoddments.com
 */
@@ -14,7 +14,7 @@ $include = [
 	'/lib/bylines_filters.php',  // Display Bylines
   '/lib/cpt.php',       			// Register Post Type
   '/lib/add-acf.php',   			// Register Advanced Custom Fields
-  '/lib/templates.php',   		// Register Views
+//  '/lib/templates.php',   		// Register Views
 ];
 
 // Require Once each file in the array
