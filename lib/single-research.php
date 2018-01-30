@@ -6,19 +6,21 @@
 
 	while (have_posts()) {
 		the_post();
+		echo 'Under Maintenance';
+		/*
 		echo '<article ';
 			post_class('post-single');
 		echo ' >';
 			echo '<div class="entry-content">';
 				echo '<div class="byline author vcard">';
-					if (function_exists( 'Research\Bylines\get_the_bylines_posts_link' )) {
+					//if (function_exists( 'Research\Bylines\get_the_bylines_posts_link' )) {
 						//echo '<h2 class="author-name">' . Research\Bylines\get_the_bylines_posts_link() . '</h2>';
-					}
+					//}
 				echo '</div>';
 	    	echo the_content();
 	      echo '<footer>';
 	      	echo wp_link_pages([
-						'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'),
+						'before' => '<nav class="page-nav"><p>' . 'Pages:',
 						'after' => '</p></nav>']);
 	      echo '</footer>'
 	    	. '</div>';
@@ -74,4 +76,5 @@
 				}
 			echo '</div>'
 		. '</article>';
+		*/
 	}
