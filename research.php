@@ -4,7 +4,7 @@ Plugin Name: ITRE Research Documents
 GitHub Plugin URI: https://github.com/dcremins/research
 GitHub Branch: master
 Description: Custom Post Type and Views for ITRE website use
-Version: 1.1.6.7
+Version: 1.1.6.8
 Author: Devin Cremins
 Author URI: http://octopusoddments.com
 */
