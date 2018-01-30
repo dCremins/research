@@ -43,10 +43,6 @@ function loop_filter($query) {
       if (!is_array($post_types) && !empty($post_types)) {
 				$post_types = explode(',', $post_types);
 			}
-			// If there are no post types set, create an array containing 'Post' post type
-      if (empty($post_types)) {
-				$post_types[] = 'post';
-			}
 			// Add our custom post type
       $post_types[] = 'research';
 			// Clean up the array, just in case
@@ -57,4 +53,6 @@ function loop_filter($query) {
   }
 }
 
-add_action('pre_get_posts', __NAMESPACE__ . '\\loop_filter');
+add_action('pre_get_posts', __NAMESPACE__ . '\\loop_filter', 99);
+
+?>

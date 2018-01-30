@@ -3,7 +3,7 @@
  Template Name: Research Archive
  Template Post Type: research
  */
-
+ 
  function page_navi() {
 	global $wp_query;
 	$bignum = 999999999;

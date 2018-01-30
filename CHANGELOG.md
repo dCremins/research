@@ -1,5 +1,11 @@
 == Changelog ==
 
+= 1.1.5 =
+* moved to smaller numbers for a second to test
+* Error is in CPT not Template
+* Error is with filter function
+* Remove the section to add post back to empty array
+
 = 1.1.4 =
 * Remove leading /
 
