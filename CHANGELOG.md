@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.1.4 =
+* Remove leading /
+
 = 1.1.3 =
 * fiddle with template function to fix 500 error on category pages
 
