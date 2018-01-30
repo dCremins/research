@@ -35,6 +35,7 @@ function research_post_type()
 add_action('init', __NAMESPACE__ . '\\research_post_type');
 
 function loop_filter($query) {
+	/*
 	if ( !is_admin() && $query->is_main_query() && (is_search() || is_archive() || is_home() || is_single())  ) {
 		// Fetch current query post types
 		$post_types = $query->get('post_type');
@@ -51,8 +52,17 @@ function loop_filter($query) {
 			// Set query to our new post type array
       $query->set('post_type', $post_types);
   }
+	*/
+
+	if (is_admin()) {
+		return;
+	} else if (!$query->is_main_query()) {
+		return;
+	} else {
+		$query->query_vars[ 'post_type' ] = [ 'post', 'page', 'research' ];
+	}
 }
 
-//add_action('pre_get_posts', __NAMESPACE__ . '\\loop_filter', 99);
+add_action('pre_get_posts', __NAMESPACE__ . '\\loop_filter', 99);
 
 ?>
