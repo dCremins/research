@@ -12,7 +12,7 @@
 			echo '<div class="entry-content">';
 				echo '<div class="byline author vcard">';
 					if (function_exists( 'Research\Bylines\get_the_bylines_posts_link' )) {
-						echo '<h2 class="author-name">' . Research\Bylines\get_the_bylines_posts_link() . '</h2>';
+						//echo '<h2 class="author-name">' . Research\Bylines\get_the_bylines_posts_link() . '</h2>';
 					}
 				echo '</div>';
 	    	echo the_content();
