@@ -35,28 +35,7 @@ function research_post_type()
 add_action('init', __NAMESPACE__ . '\\research_post_type');
 
 function loop_filter($query) {
-	/*
-	if ( !is_admin() && $query->is_main_query() && (is_search() || is_archive() || is_home() || is_single())  ) {
-		// Fetch current query post types
-		$post_types = $query->get('post_type');
-			// If there are already post types set and they aren't in an array
-			// Split at the comma and put them into an array
-      if (!is_array($post_types) && !empty($post_types)) {
-				$post_types = explode(',', $post_types);
-			}
-			// Add our custom post type
-      $post_types[] = 'research';
-			// Clean up the array, just in case
-      $post_types = array_map('trim', $post_types);
-      $post_types = array_filter($post_types);
-			// Set query to our new post type array
-      $query->set('post_type', $post_types);
-  }
-	*/
-
-	if (is_admin()) {
-		return;
-	} else if (!$query->is_main_query()) {
+	if (is_admin() || !($query->is_main_query())) {
 		return;
 	} else {
 		$query->query_vars[ 'post_type' ] = [ 'post', 'page', 'research' ];
