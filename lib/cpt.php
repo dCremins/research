@@ -35,10 +35,8 @@ function research_post_type()
 add_action('init', __NAMESPACE__ . '\\research_post_type');
 
 function loop_filter($query) {
-	if (is_admin() || !($query->is_main_query())) {
-		return;
-	} else {
-		$query->query_vars[ 'post_type' ] = [ 'post', 'page', 'research' ];
+	if (!is_admin() && ($query->is_main_query())) {
+		$query->set('post_type', array('post', 'page', 'research'));
 	}
 }
 

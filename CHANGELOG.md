@@ -1,5 +1,8 @@
 == Changelog ==
 
+= 1.1.7 =
+* Removed templates and filter since it turns out they're being handled by the theme
+
 = 1.1.6 =
 * Now only Searches and Authors are broken
 * Remove Template filter
